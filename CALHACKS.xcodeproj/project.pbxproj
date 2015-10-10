@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A1F49851BC9C85C002E18FB /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A1F49841BC9C85C002E18FB /* CoreLocation.framework */; };
 		0A9F451D1BC8D069006DAD80 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A9F451C1BC8D069006DAD80 /* main.m */; };
 		0A9F45201BC8D069006DAD80 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A9F451F1BC8D069006DAD80 /* AppDelegate.m */; };
 		0A9F45231BC8D069006DAD80 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A9F45221BC8D069006DAD80 /* ViewController.m */; };
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0A1F49841BC9C85C002E18FB /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		0A9F45181BC8D069006DAD80 /* CALHACKS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CALHACKS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A9F451C1BC8D069006DAD80 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		0A9F451E1BC8D069006DAD80 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -67,6 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A1F49851BC9C85C002E18FB /* CoreLocation.framework in Frameworks */,
 				AADE0F30514D7D2D1D92C0BC /* libPods-CALHACKS.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -167,6 +170,7 @@
 		4AB5458229B9F931A4FD1B04 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0A1F49841BC9C85C002E18FB /* CoreLocation.framework */,
 				E59D6CC927D7B864FF8C17BC /* libPods-CALHACKS.a */,
 			);
 			name = Frameworks;

@@ -1,13 +1,16 @@
 <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
 
-<table id="maintable">
-</table>
 
 <script>
 
 
+
+var search = "";
+var forums = {};
+
+
 $.ajax({
-        url: 'https://prod-mmx-001.magnet.com:5221/mmxmgmt/api/v1/topics/life/items?size=10&dateSince=2015-02-17T15%3A16%3A14-05%3A00',
+        url: 'https://prod-mmx-001.magnet.com:5221/mmxmgmt/api/v1/topics/life/items?size=100&dateSince=2015-02-17T15%3A16%3A14-05%3A00',
         // dataType: "jsonp",
         cache: false,
         beforeSend: function(xhr) {
@@ -15,24 +18,169 @@ $.ajax({
              xhr.setRequestHeader("X-mmx-api-key", "b472c6fb-d479-4487-840a-cca4fe5c07d0");
              // xhr.setRequestHeader("Content-Type", "application/json");
         }, success: function(data){
+          forums = data;
         	console.log(data);
-            for(var i = 0; i < data.items.length; i++)
-            {
-            	var item = data.items[i];
-            	console.log(item.payload);
-            	var table = document.getElementById("maintable");
-            	var row = table.insertRow(0);
-            	var cell1 = row.insertCell(0);
-            	var cell2 = row.insertCell(0);
-            	cell1.innerHTML = item.meta.tags;
-            	var image = new Image();
-				image.src = 'data:image/png;base64,'+item.meta.photo;
-				image.style.height = '200px';
-			    image.style.width = '200px';
-				cell2.appendChild(image);
-
-            }
+            reloadTable();
         }
 })
+
+function reloadTable()
+{
+  var table = document.getElementById("maintable");
+  table.innerHTML = "";
+  for(var i = 0; i < forums.items.length; i++)
+  {
+    var item = forums.items[i];
+    if(item.meta.tags.indexOf(search) >= 0 || search == "")
+    {
+      console.log(item.payload);
+      var table = document.getElementById("maintable");
+      var row = table.insertRow(0);
+      var cell1 = row.insertCell(0);
+      var cell2 = row.insertCell(0);
+      cell1.innerHTML = item.meta.tags.replace(/,/g , " ");
+      // cell1.innerHTML = "asd<br>asdas";
+      var image = new Image();
+      image.src = 'data:image/png;base64,'+item.meta.photo;
+      image.style.height = '125';
+      image.style.width = '222';
+      image.addEventListener('click',
+        function(e) {
+          setHighlight(this.src);
+        }, false);
+      cell2.appendChild(image);
+    }
+  }
+}
+
+function setHighlight(src)
+{
+  // alert(src);
+  $("#highlight").attr("src",src);
+}
+
+function runScript(e) {
+    if (e.keyCode == 13) {
+        search = $("#searchbar").val()
+        reloadTable()
+        return false;
+    }
+}
+
 </script>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE HTMl>
+
+
+<html lang="en">
+    <head>
+
+        <title>Calhacks derp thing</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+<style>
+
+
+.span {
+    height: 640px !important;
+    /*width: 50%;*/
+    /*overflow: scroll;*/
+    overflow-x:hidden;
+}
+*{margin:0;}
+#container1{
+    height: 100%;
+    /*overflow: hidden;*/
+}
+
+#container2{
+    height: 100%;
+
+    /*overflow: auto;*/
+    padding-right: 15px;
+}
+
+html, body{
+    height: 100%;
+
+    /*overflow:hidden;*/
+}
+
+</style>
+</head>
+
+
+<body>
+<div class="jumbotron">
+  <h1> Calhacks </h1>
+</div>
+
+
+<div class="container">
+  <div class="form-group">
+      <input id="searchbar" class="form-control" id="exampleInputEmail2" placeholder="Search" width="80%" onkeypress="return runScript(event)">
+  </div>
+<br>
+
+
+
+</div>
+
+
+<div class="row">
+<table class="table table-hover col-md-6" style="width: 50%">
+<!-- <table id="maintable" style="word-wrap: break-word; width: 100px "> -->
+  <tbody id="maintable">
+  </tbody>
+</table>
+<div class="col-md-6" style="width: 50%">
+  <img id="highlight" src="" width="100%">
+</div>
+</div>
+
+<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+
+</body>
+</html>

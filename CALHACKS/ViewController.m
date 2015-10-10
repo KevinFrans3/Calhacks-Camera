@@ -11,6 +11,7 @@
 #import <ImageIO/CGImageProperties.h>
 #import <MMX/MMX.h>
 #import "ClarifaiClient.h"
+#import <CoreLocation/CoreLocation.h>
 #import <CloudSight/CloudSight.h>
 
 static NSString * const kAppID = @"vM05qo55uhZard2dL4BixmMm4WsHIl6CsGCTgS_7";
@@ -106,7 +107,7 @@ static NSString * const kAppSecret = @"rx4oPPiXiCWNRVcoJ0huLz02cKiQUZtq5JPVrhjM"
     label.text = [NSString stringWithFormat:@"%d",count];
     if(count == 0)
     {
-        count = 20;
+        count = 200;
         [self capture];
     }
 }
@@ -175,6 +176,18 @@ static NSString * const kAppSecret = @"rx4oPPiXiCWNRVcoJ0huLz02cKiQUZtq5JPVrhjM"
          MMXUser *currentUser = [MMXUser currentUser];
 //         NSLog(@"capturing %@",encodedString);
          
+         [CloudSightConnection sharedInstance].consumerKey = @"w63eVgBk6UKS5zsK2ATaTA";
+         [CloudSightConnection sharedInstance].consumerSecret = @"EM8y1gD50g-PaBNVudqxuA";
+         
+         CloudSightQuery *query = [[CloudSightQuery alloc] initWithImage:imageData2
+                                                              atLocation:CGPointMake(image.size.width/2, image.size.height/2)
+                                                            withDelegate:self
+                                                             atPlacemark: nil
+                                                            withDeviceId:[[[UIDevice currentDevice] identifierForVendor] UUIDString]];
+         
+         [query start];
+
+         
          
          [self.client recognizeJpegs:@[imageData2] completion:^(NSArray *results, NSError *error) {
              // Handle the response from Clarifai. This happens asynchronously.
@@ -188,17 +201,6 @@ static NSString * const kAppSecret = @"rx4oPPiXiCWNRVcoJ0huLz02cKiQUZtq5JPVrhjM"
                  
                  NSLog([NSString stringWithFormat:@"Tags:\n%@",
                                        [result.tags componentsJoinedByString:@", "]]);
-                 
-//                 [CloudSightConnection sharedInstance].consumerKey = @"w63eVgBk6UKS5zsK2ATaTA";
-//                 [CloudSightConnection sharedInstance].consumerSecret = @"EM8y1gD50g-PaBNVudqxuA";
-//                 
-//                 CloudSightQuery *query = [[CloudSightQuery alloc] initWithImage:imageData2
-//                                                                      atLocation:CGPointMake(image.size.width/2, image.size.height/2)
-//                                                                    withDelegate:self
-//                                                                     atPlacemark:nil
-//                                                                    withDeviceId:nil];
-//                 
-//                 [query start];
                  
                  [MMXChannel channelForName:@"life" isPublic:YES success:^(MMXChannel *channel) {
                      NSDictionary *messageContent = @{@"photo":encodedString,@"tags":[[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding]};
@@ -222,14 +224,18 @@ static NSString * const kAppSecret = @"rx4oPPiXiCWNRVcoJ0huLz02cKiQUZtq5JPVrhjM"
      }];
 }
 
-//- (void)cloudSightQueryDidFinishIdentifying:(CloudSightQuery *)query {
-//    if (query.skipReason != nil) {
-//        NSLog(@"Skipped: %@", query.skipReason);
-//    } else {
-//        NSLog(@"Identified: %@", query.title);
-//        query.
-//    }
-//}
+- (void)cloudSightQueryDidFinishUploading:(CloudSightQuery *)query
+{
+    NSLog(@"uploaded");
+}
+
+- (void)cloudSightQueryDidFinishIdentifying:(CloudSightQuery *)query {
+    if (query.skipReason != nil) {
+        NSLog(@"Skipped: %@", query.skipReason);
+    } else {
+        NSLog(@"Identified: %@", query.title);
+    }
+}
 
 - (void)cloudSightQueryDidFail:(CloudSightQuery *)query withError:(NSError *)error {
     NSLog(@"Error: %@", error);

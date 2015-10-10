@@ -1,0 +1,19 @@
+<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+
+<script>
+$.ajax({
+        url: 'https://prod-mmx-001.magnet.com:5221/mmxmgmt/api/v1/topics/life/items?size=10&dateSince=2015-02-17T15%3A16%3A14-05%3A00',
+        beforeSend: function(xhr) {
+             xhr.setRequestHeader("X-mmx-app-id", "hseifkoahet");
+             xhr.setRequestHeader("X-mmx-api-key", "b472c6fb-d479-4487-840a-cca4fe5c07d0");
+             // xhr.setRequestHeader("Content-Type", "application/json");
+        }, success: function(data){
+        	console.log(data);
+            for(var i = 0; i < data.items.size; i++)
+            {
+            	var item = data.items[i];
+            	console.log(item.payload);
+            }
+        }
+})
+</script>

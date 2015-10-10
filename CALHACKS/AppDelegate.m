@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import <MMX/MMX.h>
 
 @interface AppDelegate ()
 
@@ -14,9 +15,24 @@
 
 @implementation AppDelegate
 
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    [MMX setupWithConfiguration:@"default"];
+    
+    NSString *username = @"kevin";
+    NSString *password = @"calhacks";
+    
+    NSURLCredential *credential = [NSURLCredential credentialWithUser:username password:password persistence:NSURLCredentialPersistenceNone];
+    
+    [MMXUser logInWithCredential:credential success:^(MMXUser *user) {
+        //You MUST call start when you are ready to start sending and receiving messages.
+        //Login may not always be the best time to call it.
+        //You need to be ready to handle incoming messages when calling the API
+        NSLog(@"success");
+        [MMX start];
+    } failure:^(NSError *error) {
+        
+    }];
     return YES;
 }
 

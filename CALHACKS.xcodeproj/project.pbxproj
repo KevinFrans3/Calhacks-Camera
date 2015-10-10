@@ -15,6 +15,8 @@
 		0A9F452B1BC8D069006DAD80 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A9F45291BC8D069006DAD80 /* LaunchScreen.storyboard */; };
 		0A9F45361BC8D069006DAD80 /* CALHACKSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A9F45351BC8D069006DAD80 /* CALHACKSTests.m */; };
 		0A9F45411BC8D069006DAD80 /* CALHACKSUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A9F45401BC8D069006DAD80 /* CALHACKSUITests.m */; };
+		0AEBCE471BC8E2C9001A3CD4 /* Configurations.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0AEBCE461BC8E2C9001A3CD4 /* Configurations.plist */; settings = {ASSET_TAGS = (); }; };
+		AADE0F30514D7D2D1D92C0BC /* libPods-CALHACKS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E59D6CC927D7B864FF8C17BC /* libPods-CALHACKS.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,10 @@
 		0A9F453C1BC8D069006DAD80 /* CALHACKSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CALHACKSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A9F45401BC8D069006DAD80 /* CALHACKSUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CALHACKSUITests.m; sourceTree = "<group>"; };
 		0A9F45421BC8D069006DAD80 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0AEBCE461BC8E2C9001A3CD4 /* Configurations.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Configurations.plist; sourceTree = "<group>"; };
+		1BFF7A7D8B5101F5C7E67868 /* Pods-CALHACKS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CALHACKS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CALHACKS/Pods-CALHACKS.debug.xcconfig"; sourceTree = "<group>"; };
+		D91508FF73531DD86A59697B /* Pods-CALHACKS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CALHACKS.release.xcconfig"; path = "Pods/Target Support Files/Pods-CALHACKS/Pods-CALHACKS.release.xcconfig"; sourceTree = "<group>"; };
+		E59D6CC927D7B864FF8C17BC /* libPods-CALHACKS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CALHACKS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AADE0F30514D7D2D1D92C0BC /* libPods-CALHACKS.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +92,8 @@
 				0A9F45341BC8D069006DAD80 /* CALHACKSTests */,
 				0A9F453F1BC8D069006DAD80 /* CALHACKSUITests */,
 				0A9F45191BC8D069006DAD80 /* Products */,
+				4573C9D270AFD869054E2833 /* Pods */,
+				4AB5458229B9F931A4FD1B04 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -104,6 +113,7 @@
 				0A9F451E1BC8D069006DAD80 /* AppDelegate.h */,
 				0A9F451F1BC8D069006DAD80 /* AppDelegate.m */,
 				0A9F45211BC8D069006DAD80 /* ViewController.h */,
+				0AEBCE461BC8E2C9001A3CD4 /* Configurations.plist */,
 				0A9F45221BC8D069006DAD80 /* ViewController.m */,
 				0A9F45241BC8D069006DAD80 /* Main.storyboard */,
 				0A9F45271BC8D069006DAD80 /* Assets.xcassets */,
@@ -140,6 +150,23 @@
 			path = CALHACKSUITests;
 			sourceTree = "<group>";
 		};
+		4573C9D270AFD869054E2833 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1BFF7A7D8B5101F5C7E67868 /* Pods-CALHACKS.debug.xcconfig */,
+				D91508FF73531DD86A59697B /* Pods-CALHACKS.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		4AB5458229B9F931A4FD1B04 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E59D6CC927D7B864FF8C17BC /* libPods-CALHACKS.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -147,9 +174,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0A9F45451BC8D069006DAD80 /* Build configuration list for PBXNativeTarget "CALHACKS" */;
 			buildPhases = (
+				1BED811E9747549C1A506D22 /* Check Pods Manifest.lock */,
 				0A9F45141BC8D069006DAD80 /* Sources */,
 				0A9F45151BC8D069006DAD80 /* Frameworks */,
 				0A9F45161BC8D069006DAD80 /* Resources */,
+				C4A765ADDCB7E8DFB2BB8A20 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -244,6 +273,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0A9F452B1BC8D069006DAD80 /* LaunchScreen.storyboard in Resources */,
+				0AEBCE471BC8E2C9001A3CD4 /* Configurations.plist in Resources */,
 				0A9F45281BC8D069006DAD80 /* Assets.xcassets in Resources */,
 				0A9F45261BC8D069006DAD80 /* Main.storyboard in Resources */,
 			);
@@ -264,6 +294,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1BED811E9747549C1A506D22 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C4A765ADDCB7E8DFB2BB8A20 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CALHACKS/Pods-CALHACKS-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0A9F45141BC8D069006DAD80 /* Sources */ = {
@@ -409,9 +472,11 @@
 		};
 		0A9F45461BC8D069006DAD80 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1BFF7A7D8B5101F5C7E67868 /* Pods-CALHACKS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = CALHACKS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = kevinfrans.CALHACKS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -420,9 +485,11 @@
 		};
 		0A9F45471BC8D069006DAD80 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D91508FF73531DD86A59697B /* Pods-CALHACKS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = CALHACKS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = kevinfrans.CALHACKS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -496,6 +563,7 @@
 				0A9F45471BC8D069006DAD80 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0A9F45481BC8D069006DAD80 /* Build configuration list for PBXNativeTarget "CALHACKSTests" */ = {
 			isa = XCConfigurationList;
@@ -504,6 +572,7 @@
 				0A9F454A1BC8D069006DAD80 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0A9F454B1BC8D069006DAD80 /* Build configuration list for PBXNativeTarget "CALHACKSUITests" */ = {
 			isa = XCConfigurationList;
@@ -512,6 +581,7 @@
 				0A9F454D1BC8D069006DAD80 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

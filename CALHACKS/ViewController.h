@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <CloudSight/CloudSight.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController<CloudSightQueryDelegate>
 
 
 @end

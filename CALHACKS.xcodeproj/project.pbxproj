@@ -16,6 +16,7 @@
 		0A9F45361BC8D069006DAD80 /* CALHACKSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A9F45351BC8D069006DAD80 /* CALHACKSTests.m */; };
 		0A9F45411BC8D069006DAD80 /* CALHACKSUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A9F45401BC8D069006DAD80 /* CALHACKSUITests.m */; };
 		0AEBCE471BC8E2C9001A3CD4 /* Configurations.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0AEBCE461BC8E2C9001A3CD4 /* Configurations.plist */; settings = {ASSET_TAGS = (); }; };
+		0AEBCE4A1BC8F5E9001A3CD4 /* ClarifaiClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AEBCE491BC8F5E9001A3CD4 /* ClarifaiClient.m */; settings = {ASSET_TAGS = (); }; };
 		AADE0F30514D7D2D1D92C0BC /* libPods-CALHACKS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E59D6CC927D7B864FF8C17BC /* libPods-CALHACKS.a */; };
 /* End PBXBuildFile section */
 
@@ -54,6 +55,8 @@
 		0A9F45401BC8D069006DAD80 /* CALHACKSUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CALHACKSUITests.m; sourceTree = "<group>"; };
 		0A9F45421BC8D069006DAD80 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0AEBCE461BC8E2C9001A3CD4 /* Configurations.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Configurations.plist; sourceTree = "<group>"; };
+		0AEBCE481BC8F5E9001A3CD4 /* ClarifaiClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClarifaiClient.h; sourceTree = "<group>"; };
+		0AEBCE491BC8F5E9001A3CD4 /* ClarifaiClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClarifaiClient.m; sourceTree = "<group>"; };
 		1BFF7A7D8B5101F5C7E67868 /* Pods-CALHACKS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CALHACKS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CALHACKS/Pods-CALHACKS.debug.xcconfig"; sourceTree = "<group>"; };
 		D91508FF73531DD86A59697B /* Pods-CALHACKS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CALHACKS.release.xcconfig"; path = "Pods/Target Support Files/Pods-CALHACKS/Pods-CALHACKS.release.xcconfig"; sourceTree = "<group>"; };
 		E59D6CC927D7B864FF8C17BC /* libPods-CALHACKS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CALHACKS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -112,10 +115,12 @@
 			children = (
 				0A9F451E1BC8D069006DAD80 /* AppDelegate.h */,
 				0A9F451F1BC8D069006DAD80 /* AppDelegate.m */,
-				0A9F45211BC8D069006DAD80 /* ViewController.h */,
 				0AEBCE461BC8E2C9001A3CD4 /* Configurations.plist */,
+				0A9F45211BC8D069006DAD80 /* ViewController.h */,
 				0A9F45221BC8D069006DAD80 /* ViewController.m */,
 				0A9F45241BC8D069006DAD80 /* Main.storyboard */,
+				0AEBCE481BC8F5E9001A3CD4 /* ClarifaiClient.h */,
+				0AEBCE491BC8F5E9001A3CD4 /* ClarifaiClient.m */,
 				0A9F45271BC8D069006DAD80 /* Assets.xcassets */,
 				0A9F45291BC8D069006DAD80 /* LaunchScreen.storyboard */,
 				0A9F452C1BC8D069006DAD80 /* Info.plist */,
@@ -334,6 +339,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0A9F45231BC8D069006DAD80 /* ViewController.m in Sources */,
+				0AEBCE4A1BC8F5E9001A3CD4 /* ClarifaiClient.m in Sources */,
 				0A9F45201BC8D069006DAD80 /* AppDelegate.m in Sources */,
 				0A9F451D1BC8D069006DAD80 /* main.m in Sources */,
 			);

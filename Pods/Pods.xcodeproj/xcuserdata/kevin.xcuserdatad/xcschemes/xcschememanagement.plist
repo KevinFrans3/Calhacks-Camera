@@ -4,6 +4,21 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>AFNetworking.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>BFOAuth.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>CloudSight.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>CocoaAsyncSocket.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -44,45 +59,70 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>RequestUtils.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>1CD0D46B29BCADA922945A290A1F9082</key>
+		<key>132CF74D01C4DBC11F07169C1A26E2D8</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>3BE9D7DD2E6B61084F824401B938E8E3</key>
+		<key>2FC3DBB7BB3B25BAA94D1637374A979E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>53419B6D5735FEAF2DD00E2417978C0D</key>
+		<key>3E1DD4A685D5AE4A7AB2CDDBBDE75C7D</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>5B7BCB24EC41D1B47E049018B5263BBD</key>
+		<key>673EB83B2D71E700840B3BFA7496FD8A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>7D991FFDFE9833FFCFC9FEB30B38D348</key>
+		<key>7269840C45A5E047D452022B5071A2D1</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>913C8DA30BBCD389295F9E4054F1D0A8</key>
+		<key>878DBE45FB1F411BAE5E082497670755</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>D7FDEEA45563EF3416BD7D88F4AE46D9</key>
+		<key>8BC2E26FCB5A12EF46EE047FEABBD760</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>F9205EBFE1A9BA8226D5C1510FA93B5B</key>
+		<key>8FCE7070E64E1D1C98E08758D031AAE1</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A68958A1678EEFC38B8D91E4CFA7B30E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>AA9E09508A7988A3E1AC5DEC699233AF</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B9AEF09632ECE07F36B7A7D90D75D855</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C3D020DCBAF6A7533D57115D55133C82</key>
 		<dict>
 			<key>primary</key>
 			<true/>

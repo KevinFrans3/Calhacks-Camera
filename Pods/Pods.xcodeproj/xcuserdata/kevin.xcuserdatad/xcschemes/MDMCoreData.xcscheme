@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D6C3364748D6BFC5780D6E3E"
+               BlueprintIdentifier = "D0024DB3D604DA5663133425"
                BuildableName = "libMDMCoreData.a"
                BlueprintName = "MDMCoreData"
                ReferencedContainer = "container:Pods.xcodeproj">

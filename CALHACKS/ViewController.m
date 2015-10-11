@@ -107,7 +107,7 @@ static NSString * const kAppSecret = @"rx4oPPiXiCWNRVcoJ0huLz02cKiQUZtq5JPVrhjM"
     label.text = [NSString stringWithFormat:@"%d",count];
     if(count == 0)
     {
-        count = 200;
+        count = 10;
         [self capture];
     }
 }
